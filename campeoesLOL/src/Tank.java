@@ -1,14 +1,24 @@
 
-public class Tank extends Campeao {
+public class Tank extends Campeao implements Habilidades {
 
-	@Override
-	public void execucaoDeSkill(Campeao campeaoAlvo, double manaNecessaria) {
-		if (super.mana >= manaNecessaria) {
-			super.mana -= manaNecessaria;
-			campeaoAlvo.vida += super.valorSkill;
-		} else {
-			System.out.println("Mana insuficente");
-		}
+	public Tank(String nome, int vida, int mana ){
+		super.setNome(nome);
+		super.setVida(vida);
+		super.setMana(mana);
 	}
 
+	@Override
+	public void primeiraSkill() {
+		
+	}
+
+	@Override
+	public void segundaSkill() {
+		
+	}
+
+	@Override
+	public void ultimate() {
+		
+	}
 }

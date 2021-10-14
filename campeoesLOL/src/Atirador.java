@@ -1,15 +1,30 @@
 
-public class Atirador extends Campeao {
+public class Atirador extends Campeao implements Habilidades {
+	
+	public double tiroDePistola; 
+	public double tiroDeSniper; 
+	public double tiroDeBasuca; 
+	
+
+	public Atirador(String nome, int vida, int mana ){
+		super.setNome(nome);
+		super.setVida(vida);
+		super.setMana(mana);
+	}
 
 	@Override
-	public void execucaoDeSkill(Campeao campeaoAlvo, double manaNecessaria) {
-		if (super.mana >= manaNecessaria) {
-			super.mana -= manaNecessaria;
-			campeaoAlvo.vida -= this.valorSkill;
-		} else {
-			System.out.println("Mana insuficiente");
-		}
+	public void primeiraSkill() {
+		
+	}
 
+	@Override
+	public void segundaSkill() {
+		
+	}
+
+	@Override
+	public void ultimate() {
+		
 	}
 
 }
