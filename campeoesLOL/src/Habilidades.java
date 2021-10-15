@@ -1,7 +1,7 @@
 
-public interface Habilidades {
+//public interface Habilidades {
 
-	public void primeiraSkill(); 
-    public void segundaSkill();
-    public void ultimate(); 
-}
+	//public void primeiraSkill(Campeao alvo); 
+  //  public void segundaSkill(Campeao alvo);
+  //  public void ultimate(Campeao alvo); 
+//}

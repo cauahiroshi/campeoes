@@ -5,9 +5,6 @@ public abstract class Campeao {
 	protected int vida;
 	protected int mana;
 	private double danoDeAtaqueBasico;
-	protected double danoPrimeiraSkill;
-	protected double danoSegundaSkill;
-	protected double valorUltimate; 
 
 	public String getNome() {
 		return nome;
@@ -41,6 +38,12 @@ public abstract class Campeao {
 	public void setDanoDeAtaqueBasico(double danoDeAtaqueBasico) {
 		this.danoDeAtaqueBasico = danoDeAtaqueBasico;
 	}
+	
+	public abstract void primeiraSkill(Campeao alvo); 
+	
+    public abstract void segundaSkill(Campeao alvo);
+    
+    public abstract void ultimate(Campeao alvo); 
 
 
 }

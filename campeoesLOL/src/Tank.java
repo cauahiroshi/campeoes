@@ -1,5 +1,9 @@
 
-public class Tank extends Campeao implements Habilidades {
+public class Tank extends Campeao {
+	
+	private int golpeDeEspada = 50;
+	private int giroDeEspada = 100;
+	private int superCura = vida * 2; 
 
 	public Tank(String nome, int vida, int mana ){
 		super.setNome(nome);
@@ -8,17 +12,30 @@ public class Tank extends Campeao implements Habilidades {
 	}
 
 	@Override
-	public void primeiraSkill() {
-		
+	public void primeiraSkill(Campeao alvo) {
+		if (super.mana >= 30) {
+			super.mana -= 30;
+			alvo.vida -= golpeDeEspada;
+		}
 	}
 
 	@Override
-	public void segundaSkill() {
-		
+	public void segundaSkill(Campeao alvo) {
+		if (super.mana >= 60) {
+			super.mana -= 60; 
+			alvo.vida -= giroDeEspada;
+		}else {
+			System.out.println("Mana insuficiente");
+		}
 	}
 
 	@Override
-	public void ultimate() {
-		
+	public void ultimate(Campeao alvo) {
+		if (super.mana >= 130) {
+			super.mana -= 130;
+			alvo.vida += superCura; 
+		}else {
+			System.out.println("Mana Insuficiente");
+		}
 	}
 }
