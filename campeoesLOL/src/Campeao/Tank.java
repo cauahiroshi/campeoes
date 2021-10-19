@@ -1,9 +1,10 @@
+package Campeao;
 
 public class Tank extends Campeao {
 	
 	private int golpeDeEspada = 50;
 	private int giroDeEspada = 100;
-	private int superCura = vida * 2; 
+	private int superCura = 200; 
 
 	public Tank(String nome, int vida, int mana ){
 		super.setNome(nome);
@@ -37,5 +38,11 @@ public class Tank extends Campeao {
 		}else {
 			System.out.println("Mana Insuficiente");
 		}
+	}
+
+	@Override
+	public void passiva(Campeao alvo) {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -1,15 +1,19 @@
+package CampeaoTeste;
 
+import Campeao.Atirador;
+import Campeao.Campeao;
+import Campeao.Tank;
 
 public class TestaCampeao {
 
 	public static void main(String[] args) {
 
 		Campeao atirador1 = new Atirador("Jinx", 500, 400);
-		atirador1.setDanoDeAtaqueBasico(60.0);
+		atirador1.setDanoAtaqueBasico(60);
 
 
 		Campeao tank1 = new Tank("Garen", 900, 400);
-		tank1.setDanoDeAtaqueBasico(30);
+		tank1.setDanoAtaqueBasico(30);
 		
 		
 		System.out.println("Nome:" + atirador1.getNome());
@@ -23,20 +27,19 @@ public class TestaCampeao {
 		System.out.println("Mana = " + tank1.getMana());
 		System.out.println();
 		
-		//atirador1.primeiraSkill(tank1);
-	//	atirador1.segundaSkill(tank1);
-		//atirador1.ultimate(tank1);
-		
 		tank1.primeiraSkill(atirador1);
 		tank1.segundaSkill(atirador1);
 		tank1.ultimate(tank1);
 		
-		System.out.println(tank1.getVida());
-		System.out.println(atirador1.getVida());
+		System.out.println("vida: " + atirador1.getVida());
+		System.out.println("mana: " + tank1.getMana());
 		
-		System.out.println(tank1.getMana());
+		atirador1.ataqueBasico(tank1);
+	
+		System.out.println("vida tank: " + tank1.getVida());
+		System.out.println("vida atirador: " + atirador1.getVida());
 
-
+		
 
 	}
 

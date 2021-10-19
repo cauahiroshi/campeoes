@@ -1,10 +1,10 @@
+package Campeao;
 
 public class Atirador extends Campeao {
 	
 	private int tiroDePistola = 90; 
 	private int tiroDeSniper = 120; 
 	private int tiroDeBazuca = 230; 
-	
 	
 	public Atirador(String nome, int vida, int mana ){
 		super.setNome(nome);
@@ -40,6 +40,12 @@ public class Atirador extends Campeao {
 		}else {
 			System.out.println("Mana insuficiente");
 		}
+	}
+
+	@Override
+	public void passiva(Campeao alvo) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
