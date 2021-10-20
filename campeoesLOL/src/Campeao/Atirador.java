@@ -1,6 +1,6 @@
 package Campeao;
 
-public class Atirador extends Campeao {
+public class Atirador extends Campeao implements Passiva {
 	
 	private int tiroDePistola = 90; 
 	private int tiroDeSniper = 120; 
@@ -44,8 +44,9 @@ public class Atirador extends Campeao {
 
 	@Override
 	public void passiva(Campeao alvo) {
-		// TODO Auto-generated method stub
-		
+		if (ataqueBasico(alvo)) {
+			System.out.println("ok");
+		}
 	}
 
 }

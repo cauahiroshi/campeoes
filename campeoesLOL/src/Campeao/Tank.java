@@ -1,6 +1,6 @@
 package Campeao;
 
-public class Tank extends Campeao {
+public class Tank extends Campeao implements Passiva {
 	
 	private int golpeDeEspada = 50;
 	private int giroDeEspada = 100;
@@ -42,7 +42,6 @@ public class Tank extends Campeao {
 
 	@Override
 	public void passiva(Campeao alvo) {
-		// TODO Auto-generated method stub
 		
 	}
 }

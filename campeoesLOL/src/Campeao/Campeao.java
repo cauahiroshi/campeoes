@@ -7,6 +7,8 @@ public abstract class Campeao {
 	protected int mana;
 	protected int danoAtaqueBasico;
 	
+	public void campeaoAlvo(Campeao alvo) {
+	}
 
 	public String getNome() {
 		return nome;
@@ -42,8 +44,9 @@ public abstract class Campeao {
 	}
 
 	public boolean ataqueBasico(Campeao alvo) {
+		
 		alvo.vida -= this.danoAtaqueBasico;
-		return true;
+		return true; 
 	}
 	
 	public abstract void primeiraSkill(Campeao alvo);
@@ -52,6 +55,5 @@ public abstract class Campeao {
 
 	public abstract void ultimate(Campeao alvo);
 	
-	public abstract void passiva(Campeao alvo); 
 
 }
