@@ -25,26 +25,6 @@ public class TestaCampeao {
 		System.out.println("Vida = " + tank1.getVida());
 		System.out.println("Mana = " + tank1.getMana());
 		System.out.println();
-		
-		tank1.primeiraSkill(atirador1);
-		tank1.segundaSkill(atirador1);
-		tank1.ultimate(tank1);
-		
-		atirador1.ataqueBasico(tank1);
-		
-		System.out.println("Nome:" + atirador1.getNome());
-		System.out.println("Vida = " + atirador1.getVida());
-		System.out.println("Mana = " + atirador1.getMana());
-		System.out.println();
-
-		System.out.println("Nome:" + tank1.getNome());
-		System.out.println("Vida = " + tank1.getVida());
-		System.out.println("Mana = " + tank1.getMana());
-		System.out.println();
-		
-		
-
-		
 
 	}
 

@@ -6,6 +6,7 @@ public class Tank extends Campeao implements Passiva {
 	private int giroDeEspada = 100;
 	private int superCura = 200; 
 
+
 	public Tank(String nome, int vida, int mana ){
 		super.setNome(nome);
 		super.setVida(vida);
@@ -39,9 +40,16 @@ public class Tank extends Campeao implements Passiva {
 			System.out.println("Mana Insuficiente");
 		}
 	}
+	
 
 	@Override
-	public void passiva(Campeao alvo) {
+	public void ataqueBasico(Campeao alvo) {
+		alvo.vida -= super.danoAtaqueBasico;
+	}
+	
+	@Override
+	public void passiva() {
 		
 	}
+
 }

@@ -43,10 +43,18 @@ public class Atirador extends Campeao implements Passiva {
 	}
 
 	@Override
-	public void passiva(Campeao alvo) {
-		if (ataqueBasico(alvo)) {
-			System.out.println("ok");
+	public void ataqueBasico(Campeao alvo) {
+		alvo.vida -= super.danoAtaqueBasico;
+		
+		if (this.vida < 500) {
+			passiva(); 
 		}
+	}
+	
+	@Override
+	public void passiva() {
+		double cura = this.vida / this.vida ; 
+		super.vida += cura; 
 	}
 
 }
