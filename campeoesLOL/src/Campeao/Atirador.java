@@ -2,59 +2,67 @@ package Campeao;
 
 public class Atirador extends Campeao implements Passiva {
 	
+	protected static final int vidaInicial= 600;
+	protected static final int manaInicial= 500;
 	private int tiroDePistola = 90; 
 	private int tiroDeSniper = 120; 
-	private int tiroDeBazuca = 230; 
+	private int tiroDeBazuca = 250; 
 	
-	public Atirador(String nome, int vida, int mana ){
+	
+	public Atirador(String nome){
 		super.setNome(nome);
-		super.setVida(vida);
-		super.setMana(mana);
+		super.setVida(vidaInicial);
+		super.setMana(manaInicial);
 	}
-
+	
+	
 	@Override
-	public void primeiraSkill(Campeao alvo) {
-		if (super.mana >= 30){
-			super.mana -= 30; 
-			alvo.vida -= tiroDePistola; 
-		}else {
-			System.out.println("Mana insuficiente");
-		}
+	public void passiva() {
+		double cura = vidaInicial / (vidaInicial/2); 
+		super.vidaAtual += cura; 
 	}
-
-	@Override
-	public void segundaSkill(Campeao alvo) {
-		if (super.mana >= 60) {
-			super.mana -= 60; 
-			alvo.vida -= tiroDeSniper; 
-		}else {
-			System.out.println("Mana Insuficiente");
-		}
-	}
-
-	@Override
-	public void ultimate(Campeao alvo) {
-		if (super.mana >= 100) {
-			super.mana -= 100;
-			alvo.vida -= tiroDeBazuca; 
-		}else {
-			System.out.println("Mana insuficiente");
-		}
-	}
-
+	
+	
 	@Override
 	public void ataqueBasico(Campeao alvo) {
-		alvo.vida -= super.danoAtaqueBasico;
+		alvo.vidaAtual -= super.danoAtaqueBasico;
 		
-		if (this.vida < 500) {
+		if (vidaAtual < vidaInicial) {
 			passiva(); 
 		}
 	}
 	
+
 	@Override
-	public void passiva() {
-		double cura = this.vida / this.vida ; 
-		super.vida += cura; 
+	public void primeiraSkill(Campeao alvo) {
+		if (super.manaAtual >= 30){
+			super.manaAtual -= 30; 
+			alvo.vidaAtual -= tiroDePistola; 
+		}else {
+			System.out.println("Mana insuficiente");
+		}
+	}
+	
+
+	@Override
+	public void segundaSkill(Campeao alvo) {
+		if (super.manaAtual >= 60) {
+			super.manaAtual -= 60; 
+			alvo.vidaAtual -= tiroDeSniper; 
+		}else {
+			System.out.println("Mana Insuficiente");
+		}
+	}
+	
+
+	@Override
+	public void ultimate(Campeao alvo) {
+		if (super.manaAtual >= 100) {
+			super.manaAtual -= 100;
+			alvo.vidaAtual -= tiroDeBazuca; 
+		}else {
+			System.out.println("Mana insuficiente");
+		}
 	}
 
 }

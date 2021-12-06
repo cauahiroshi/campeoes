@@ -3,8 +3,8 @@ package Campeao;
 public abstract class Campeao {
 
 	protected String nome;
-	protected int vida;
-	protected int mana;
+	protected int vidaAtual;
+	protected int manaAtual;
 	protected double danoAtaqueBasico;
 
 	public String getNome() {
@@ -16,20 +16,19 @@ public abstract class Campeao {
 	}
 
 	public int getVida() {
-		return vida;
+		return vidaAtual;
 	}
 
 	public void setVida(int vida) {
-		this.vida = vida;
-
+		this.vidaAtual = vida;
 	}
 
 	public int getMana() {
-		return mana;
+		return manaAtual;
 	}
 
 	public void setMana(int mana) {
-		this.mana = mana;
+		this.manaAtual = mana;
 	}
 
 	public double getDanoAtaqueBasico() {
