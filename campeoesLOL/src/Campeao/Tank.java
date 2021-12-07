@@ -2,17 +2,17 @@ package Campeao;
 
 public class Tank extends Campeao implements Passiva {
 	
-	protected static final int vidaInicial= 1200;
-	protected static final int manaInicial= 500;
+	protected final int vidaInicial;
+	protected final int manaInicial;
 	private int golpeDeEspada = 50;
 	private int giroDeEspada = 100;
 	private int superCura = 200; 
 
 
-	public Tank(String nome){
+	public Tank(String nome, int vida, int mana){
 		super.setNome(nome);
-		super.setVida(vidaInicial);
-		super.setMana(manaInicial);
+		vidaInicial=vida;
+		manaInicial=mana; 
 	}
 	
 	

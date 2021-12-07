@@ -8,11 +8,11 @@ public class TestaCampeao {
 
 	public static void main(String[] args) {
 
-		Campeao atirador1 = new Atirador("Jinx");
+		Campeao atirador1 = new Atirador("Jinx", 700, 500);
 		atirador1.setDanoAtaqueBasico(60);
 
 
-		Campeao tank1 = new Tank("Garen");
+		Campeao tank1 = new Tank("Garen", 1200, 500);
 		tank1.setDanoAtaqueBasico(30);
 		
 		
@@ -26,20 +26,6 @@ public class TestaCampeao {
 		System.out.println("Mana = " + tank1.getMana());
 		System.out.println();
 		
-	    atirador1.ataqueBasico(tank1); 
-	    atirador1.ataqueBasico(tank1); 
-	    
-	    tank1.segundaSkill(atirador1);
-	    
-	    atirador1.ataqueBasico(tank1); 
-	    atirador1.ataqueBasico(tank1);
-	    
-	    
-	    atirador1.ultimate(tank1);
-	    
-	    tank1.ataqueBasico(atirador1);
-	    tank1.ataqueBasico(atirador1);
-	    tank1.ataqueBasico(atirador1);
 	   
 	  
 	    System.out.println("tank vida: " + tank1.getVida());
