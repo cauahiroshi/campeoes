@@ -2,17 +2,13 @@ package Campeao;
 
 public class Atirador extends Campeao implements Passiva {
 	
-	protected final int vidaInicial;
-	protected final int manaInicial;
 	private int tiroDePistola = 90; 
 	private int tiroDeSniper = 120; 
 	private int tiroDeBazuca = 250; 
 	
 	
 	public Atirador(String nome, int vida, int mana){
-		super.setNome(nome);
-		vidaInicial = vida; 
-		manaInicial=mana; 
+		super(nome, vida, mana);
 	}
 	
 	
